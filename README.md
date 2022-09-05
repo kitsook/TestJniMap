@@ -29,7 +29,7 @@ A: Yes (obviously).
 The program creates worker threads which will make (a lot of) JNI calls. A good way to visualize what is going on is to also run VisualVM to monitor the CPU and memory usage.
 
 This is what the memory usage looks like when running the code:
-
+file:///home/cho/Desktop/jni oom.png![image](https://user-images.githubusercontent.com/13360325/188356598-abf252ca-589f-47cb-85bb-48e9dc72c60a.png)
 
 (1) Running the JNI calls normally, freeing local references as it goes. Everything works as expected.
 
