@@ -11,16 +11,16 @@ make
 ## What is this?
 This is a quick test on using local and global references of JNI. Specially, it is to answer the following questions:
 
-Q: Is it necessary to free local references within JNI?
+Q: Is it necessary to free local references within JNI?\
 A: Not necessary. JVM should free up local references after the JNI call returned. However, if the JNI call is creating lots of local references, it is good practice to free up memory within the JNI call.
 
-Q: Can a JNI call returns local references?
+Q: Can a JNI call returns local references?\
 A: Yes. JVM will manage and free the memory on the Java side.
 
-Q: Is it OK to free the returned local reference within JNI function before exiting?
+Q: Is it OK to free the returned local reference within JNI function before exiting?\
 A: NO! Doing so will cause the JNI function to return null.
 
-Q: If leaving global references hanging around without freeing them in JNI cause out-of-memory issue?
+Q: If leaving global references hanging around without freeing them in JNI cause out-of-memory issue?\
 A: Yes (obviously).
 
 *Tested with OpenJDK 11.0.16*
